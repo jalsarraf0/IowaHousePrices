@@ -1,7 +1,38 @@
-# Linear Regression Model (ONE Neuron) [![MIT license](http://img.shields.io/badge/license-MIT-lightgrey.svg)](http://opensource.org/licenses/MIT)
+# IowaHousePrices
 
-This application is a sample of how to use keras to build a linear regression model that predicts the price of a house based on square footage.
+Single-neuron linear regression model that predicts Iowa home sale prices from square footage.
 
-In this sample there is only one neuron.
+## Overview
 
-Ensure that you are using Anaconda, the latest version of Python and have all dependencies working!
+This project uses Keras to build the simplest possible neural network — a single Dense neuron — to fit a linear regression line through Iowa housing data. It reads square footage and sale price pairs from a CSV file, trains for 30 epochs, plots the data alongside the predicted regression line, and then prints a price estimate for a given square footage value (default: 2000 sq ft).
+
+The goal is a minimal, readable example of how Keras can be used for numerical regression on tabular data.
+
+## How to Run
+
+1. Install dependencies:
+
+   ```bash
+   pip install keras matplotlib pandas
+   ```
+
+2. Run the script:
+
+   ```bash
+   python main.py
+   ```
+
+   The script reads `prices.csv` from the current directory, trains the model, displays a scatter plot with the regression line, and prints a predicted price for 2000 square feet.
+
+## Dependencies
+
+- Python 3.x
+- [Keras](https://keras.io/)
+- [pandas](https://pandas.pydata.org/)
+- [matplotlib](https://matplotlib.org/)
+
+The `prices.csv` file must be present in the same directory as `main.py`. It requires two columns: `SquareFeet` and `SalePrice`.
+
+## License
+
+MIT License
